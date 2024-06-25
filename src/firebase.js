@@ -1,15 +1,18 @@
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
-// Initialize Firebase
-firebase.initializeApp({
-        apiKey: "AIzaSyDyZZmsR2EIkKBVX2ZCJnMHiKSQbvNIpIc",
-        authDomain: "unichat-d949e.firebaseapp.com",
-        projectId: "unichat-d949e",
-        storageBucket: "unichat-d949e.appspot.com",
-        messagingSenderId: "386804452146",
-        appId: "1:386804452146:web:d372a15dd90cce02a4a52b"
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyBrZaTpIYYzRDZJjq-ApCyeOgSzOtdOLPY",
+  authDomain: "zylochat.firebaseapp.com",
+  projectId: "zylochat",
+  storageBucket: "zylochat.appspot.com",
+  messagingSenderId: "743823095259",
+  appId: "1:743823095259:web:792eb2dac37835d26163fe",
+  measurementId: "G-FRSPC9LCR5"
+};
 
-// Access auth object
-export const auth = firebase.auth();
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+
+export { auth };
