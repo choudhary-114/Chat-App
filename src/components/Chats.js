@@ -33,7 +33,7 @@ const Chats = ( ) => {
 
         axios.get('https://api.chatengine.io/users/me',{
             headers:{
-                "project-id":"ad8ba365-c6d9-4140-8635-6dda3934b1c2",
+                "project-id":"e11d839b-db76-414d-8cc2-36f81cf78ed7",
                 "user-name" : user.email ,
                 "user-secret" : user.uid,
             }
@@ -54,7 +54,7 @@ const Chats = ( ) => {
               axios.post(
                 'https://api.chatengine.io/users/',
                 formdata,
-                { headers: { "private-key": "e693f0ec-537d-491c-88b7-1de25acad30b" }}
+                { headers: { "private-key": "721701d0-9542-404d-934a-3bef9c887596" }}
               )
               .then(() => setLoading(false))
               .catch(e => console.log('e', e.response))
@@ -68,7 +68,7 @@ const Chats = ( ) => {
         <div className="chats-page">
             <div className="nav-bar">
                 <div className="logo-tab">
-                Godara-Chat
+                Chat
                 </div>
                 <div onClick={handleLogout} className="logout-tab">
                 Logout
@@ -76,7 +76,7 @@ const Chats = ( ) => {
             </div>
             <ChatEngine 
                 height="calc(100vh - 66px)"
-                projectID="ad8ba365-c6d9-4140-8635-6dda3934b1c2"
+                projectID="e11d839b-db76-414d-8cc2-36f81cf78ed7"
                 userName = {user.email}
                 userSecret={user.uid}
             />
